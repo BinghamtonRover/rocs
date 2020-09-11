@@ -75,3 +75,6 @@ In general, one should use an additional register over getting fancy with the co
 Storing as much state as possible on the Responder side will limit the amount of information that must be passed between Responder and Controller, which will naturally limit the number of registers required.
 
 If a large amount of data must be transferred, don't use ROCS.
+
+# Help! I'm not getting a response / I'm getting bogus values!
+It's probably a hardware issue. Make sure communication wires are relatively short and don't pass too close / too parallel to high-current lines (like motor or power wires). Using shielded cable is strongly recommended. https://hackaday.com/2017/02/08/taking-the-leap-off-board-an-introduction-to-i2c-over-long-wires/ contains information about dealing with long-distance I2C issues. Note that boards such as the Nvidia TX2/Nano and Raspberry Pi often have built-in pullup resistors on their I2C lines, so take that into consideration if pursuing a better pullup resistor value.
