@@ -1,6 +1,6 @@
 #include "rocs.hpp"
 
-#include <Wire.h>
+#include <i2c_driver_wire.h>
 
 namespace rocs {
 
